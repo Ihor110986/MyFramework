@@ -17,7 +17,7 @@ abstract class AbstractController
 
   public function viewTemplate(string $template, array $variables = []): bool|string
   {
-    $template_file = __DIR__ . '/../Templates/' . $template . '.html.php';
+    $template_file = __DIR__ . '/../Templates/' . $template . '.base.php';
     if (!file_exists($template_file)) {
       $template_file = './Templates/not-found.html.php';
     }

@@ -4,7 +4,7 @@
 namespace App;
 
 
-class MyRouter
+class Router
 {
   private array $routes = [];
 
@@ -18,7 +18,7 @@ class MyRouter
     if (!empty($this->routes[$request_uri]) && class_exists($this->routes[$request_uri])) {
       $className = $this->routes[$request_uri];
     } else {
-      $className = \App\MyControllers\NotFound::class;
+      $className = \App\MyControllers\NotFoundController::class;
     }
     $controller = new $className();
 
