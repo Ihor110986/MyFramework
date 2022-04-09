@@ -1,8 +1,16 @@
 {
+    "name": "root/www",
+    "type": "project",
+    "autoload": {
+      "psr-4": {
+        "App\\": "src/"
+      }
+    },
 
     "require": {
         "symfony/cache": "^6.0",
         "doctrine/orm": "^2.11",
-        "doctrine/annotations": "^1.13"
+        "doctrine/annotations": "^1.13",
+        "psr/log": "^3.0"
     }
 }
