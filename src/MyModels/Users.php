@@ -23,7 +23,7 @@ class Users
   private string $login;
 
   /**
-   * @Column(name="password", type="string", length=100, nullable=false)
+   * @Column(name="login", type="string", length=150, nullable=false, unique=true)
    */
   private string $password;
 

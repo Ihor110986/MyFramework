@@ -22,9 +22,21 @@ class Posts
    */
   private ?string $text;
 
+  /**
+   * @ManyToOne(targetEntity="User")
+   * @JoinColumn(name="user_id", referencedColumnName="id")
+   */
+  private ?int $userId;
+
+   /**
+   * @Column(type="datetime")
+   */
+  private $created;
+
   public function __construct(string $text)
   {
     $this->text = $text;
+    @@ -49,8 +54,13 @@ public function getText(): string
   }
 
 /**
@@ -38,5 +50,16 @@ class Posts
   /**
    * @return string
    */
+
+
+  public function getUserId(): ?int
+  {
+    return $this->userId;
+  }
+
+  public function getCreated()
+  {
+    return $this->created;
+  }
 
 }
